@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "strict": true,
+        "module": "ES2020",
+        "moduleResolution": "node16",
+        "target": "ES2020",
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "resolveJsonModule": true,
+        "baseUrl": ".",
+        "paths": {
+            "@main/*": ["src/*"],
+            "@foo/*": ["tests/*"]
+        },
+        "noEmit": true
+    },
+    "include": [
+        "src",
+        "tests"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

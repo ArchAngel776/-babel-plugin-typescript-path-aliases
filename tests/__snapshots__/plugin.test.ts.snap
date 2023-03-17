@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test 1`] = `
+""use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = printPluginCode;
+var _index = _interopRequireDefault(require("../src/index"));
+require("../src/interfaces/AliasesData");
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function printPluginCode() {
+  console.log(_index.default.toString());
+}"
+`;
