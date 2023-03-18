@@ -79,8 +79,13 @@ let ConfigCompiler = /*#__PURE__*/function () {
     return false;
   };
   _proto.createRelativeSourcePath = function createRelativeSourcePath(target, reference) {
-    const result = (0, _path.relative)((0, _path.dirname)(target), reference);
-    return (0, _path.dirname)(target) === (0, _path.dirname)(reference) ? `./${result}` : result;
+    const result = (0, _path.parse)((0, _path.relative)((0, _path.dirname)(target), reference));
+    if (result.dir === "") {
+      result.root = "./";
+    } else if (!/^\.\.?\//.test(result.dir)) {
+      result.dir = `./${result.dir}`;
+    }
+    return (0, _path.format)(result);
   };
   _proto.getIncludes = function getIncludes(tsConfig) {
     if (tsConfig.include) {
