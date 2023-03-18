@@ -94,7 +94,14 @@ export default class ConfigCompiler
     protected createRelativeSourcePath(target: string, reference: string): string
     {
         const result = parse(relative(dirname(target), reference))
-        result.root = "./"
+
+        if (result.dir === "") {
+            result.root = "./"
+        }
+        else if (!/^\.\.?\//.test(result.dir)) {
+            result.dir = `./${result.dir}`
+        }
+        
         return format(result)
     }
 
