@@ -7,6 +7,7 @@ import ConfigCompiler from "./components/ConfigCompiler"
 import tsConfigGlob from "./hooks/tsConfigGlob"
 import loadJson from "./hooks/loadJson"
 
+
 const root = getRootPathSync()
 
 export default function (): PluginObj

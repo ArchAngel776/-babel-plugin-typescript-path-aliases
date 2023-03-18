@@ -37,7 +37,7 @@ let ConfigCompiler = /*#__PURE__*/function () {
         const root = (0, _path.resolve)(this.workSpace, baseUrl, (0, _rootPath.default)(pattern));
         const reference = source.value.replace(new RegExp(`^${(0, _rootPath.default)(alias)}`), root);
         if ((0, _path.isAbsolute)(reference)) {
-          source.value = (0, _path.relative)((0, _path.dirname)(this.target), reference);
+          source.value = this.createRelativeSourcePath(this.target, reference);
         }
       });
     }
@@ -77,6 +77,10 @@ let ConfigCompiler = /*#__PURE__*/function () {
       }
     }
     return false;
+  };
+  _proto.createRelativeSourcePath = function createRelativeSourcePath(target, reference) {
+    const result = (0, _path.relative)((0, _path.dirname)(target), reference);
+    return (0, _path.dirname)(target) === (0, _path.dirname)(reference) ? `./${result}` : result;
   };
   _proto.getIncludes = function getIncludes(tsConfig) {
     if (tsConfig.include) {

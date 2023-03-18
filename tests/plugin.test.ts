@@ -2,6 +2,7 @@ import { resolve } from "path"
 import { transformFileSync } from "@babel/core"
 import plugin from "../src/index"
 
+
 const sourceCodeFile = resolve(__dirname, "code.ts")
 
 test("Test", () =>

@@ -9,6 +9,7 @@ export default class ConfigCompiler {
     compile(source: StringLiteral, tsConfig: TSConfig): void;
     isInScope(tsConfig: TSConfig): boolean;
     checkRoots(tsConfig: TSConfig): boolean;
+    protected createRelativeSourcePath(target: string, reference: string): string;
     protected getIncludes(tsConfig: TSConfig): Array<string> | null;
     protected getBaseURL(tsConfig: TSConfig): string | null;
     protected getPaths(tsConfig: TSConfig): MapLike<Array<string>> | null;

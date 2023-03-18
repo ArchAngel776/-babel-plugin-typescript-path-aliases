@@ -1,5 +1,6 @@
 import { CompilerOptions } from "typescript"
 
+
 export default interface TSConfig
 {
     extends?: string

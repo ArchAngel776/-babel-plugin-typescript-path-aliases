@@ -1,10 +1,11 @@
 import { globSync } from "glob"
-import { resolve, relative, isAbsolute, dirname } from "path"
+import { resolve, relative, isAbsolute, dirname, parse, format } from "path"
 import { StringLiteral } from "@babel/types"
 import { MapLike } from "typescript"
 import rootPath from "../hooks/rootPath"
 import TSConfig from "../interfaces/TSConfig"
 import AliasesData from "../interfaces/AliasesData"
+
 
 export default class ConfigCompiler
 {
@@ -38,7 +39,7 @@ export default class ConfigCompiler
                 const reference = source.value.replace(new RegExp(`^${rootPath(alias)}`), root)
 
                 if (isAbsolute(reference)) {
-                    source.value = relative(dirname(this.target), reference)
+                    source.value = this.createRelativeSourcePath(this.target, reference)
                 }
             })
         }
@@ -88,6 +89,13 @@ export default class ConfigCompiler
         }
 
         return false
+    }
+
+    protected createRelativeSourcePath(target: string, reference: string): string
+    {
+        const result = parse(relative(dirname(target), reference))
+        result.root = "./"
+        return format(result)
     }
 
     protected getIncludes(tsConfig: TSConfig): Array<string> | null
