@@ -2,5 +2,6 @@ src/
 tests/
 .babelrc
 .gitignore
+.npmrc
 jest.config.ts
 tsconfig.json
