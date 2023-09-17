@@ -1,5 +1,5 @@
 {
-  "name": "babel-plugin-typescript-path-aliases",
+  "name": "@babel/babel-plugin-typescript-path-aliases",
   "version": "1.0.0",
   "description": "Babel plugin provide to resolving of path aliases used in tsconfig.json file.",
   "main": "build/index.js",
