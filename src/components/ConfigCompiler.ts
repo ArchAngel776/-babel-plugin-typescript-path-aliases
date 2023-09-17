@@ -101,11 +101,11 @@ export default class ConfigCompiler
         else if (!/^\.\.?\//.test(result.dir)) {
             result.dir = `./${result.dir}`
         }
-        
+
         return format(result)
     }
 
-    protected getIncludes(tsConfig: TSConfig): Array<string> | null
+    public getIncludes(tsConfig: TSConfig): Array<string> | null
     {
         if (tsConfig.include) {
             return tsConfig.include
@@ -114,7 +114,7 @@ export default class ConfigCompiler
         return null
     }
 
-    protected getBaseURL(tsConfig: TSConfig): string | null
+    public getBaseURL(tsConfig: TSConfig): string | null
     {
         if (tsConfig.compilerOptions?.baseUrl) {
             return tsConfig.compilerOptions.baseUrl
@@ -123,7 +123,7 @@ export default class ConfigCompiler
         return null
     }
 
-    protected getPaths(tsConfig: TSConfig): MapLike<Array<string>> | null
+    public getPaths(tsConfig: TSConfig): MapLike<Array<string>> | null
     {
         if (tsConfig.compilerOptions?.paths) {
             return tsConfig.compilerOptions.paths
