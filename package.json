@@ -12,6 +12,9 @@
   "repository": "https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases.git",
   "author": "ArchAngel776",
   "license": "BSD-3-Clause",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "devDependencies": {
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.3",
