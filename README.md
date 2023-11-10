@@ -7,7 +7,7 @@ Each of us - TS developers - at the specific point of a bigger project meets wit
 import ModelSchema from "../../../../data/interfaces/ModelSchema"
 import ModelBase from "../../../foundations/ModelBase"
 import Query from "../../../../../../tools/Query"
-(and 36 more imports started with ../../../../../../)
+(and 36 more imports started with "../../../../../../")
 ```
 
 To protect us from this kind of unesthetic TypeScript provides a special option like **path aliases**, which can be configured int our **tsconfig.json** file(s) contained in the whole project diretory.
@@ -30,7 +30,7 @@ It allows as to replace ugly, relative module import with such a more developer 
 import ModelSchema from "@data/interfaces/ModelSchema"
 import ModelBase from "@foundations/ModelBase"
 import Query from "@tools/Query"
-(and 36 more imports started with @)
+(and 36 more imports started with "@")
 ```
 
 Chapeau bas, TypeScript creators - this feature makes me stop closing my eyes every time I open my app source module. 
