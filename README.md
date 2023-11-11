@@ -87,4 +87,4 @@ var _Method = _interopRequireDefault(require("@helpers/Method"));
 
 There are no any doubts - we can clearly assume certain conclusion:
 >[!NOTE]
->Code compiled by Babel as JavaScript cannot read path aliases proper for TypeScript. It also doesn't take into account using path aliases thus, won't replace them with their relatives equivalents
+>Code compiled by Babel as JavaScript bundle cannot read path aliases proper for TypeScript source code. It also doesn't take into account using path aliases thus, won't replace them with their relatives equivalents.
