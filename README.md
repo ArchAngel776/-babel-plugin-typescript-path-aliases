@@ -12,6 +12,7 @@ Babel plugin provide to resolving of path aliases used in tsconfig.json file(s).
 - [Issues](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#issues)
   - [Limits](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#limits)
   - [Report issue](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#report-issue)
+- [License](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#license)
 
 ## Abstract
 ### Introduction
