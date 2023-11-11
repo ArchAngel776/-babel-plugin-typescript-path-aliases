@@ -160,6 +160,4 @@ It is all. The most probably above limits will be removed in the future versions
 
 ### Issues
 If you see any unexpected issues in my plugin behavior feel free for inform me about that. I am open to improve my software as much as it is possible.
-To report your doubts, please vist an [Issue section] (https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases/issues) and report everything what you have seen as incorect.
-
-### Thank you
+To report your doubts, please vist an [Issue section](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases/issues) and report everything what you have seen as incorect.
