@@ -140,3 +140,23 @@ var _Method = _interopRequireDefault(require("../../helpers/Method"));
 
 It is that - we got it! Right now, you can enjoy your pretty imports in your source code without any worries about your build behaviour.
 Feel free for use and share this project :)
+
+## Issues
+### Limits
+Unfortunately, plugin is not absolutelly free from any limits. There are a few of that:
+
+>[!WARNING]
+>Plugin read all tsconfig.json files, but only from single file location to root project dir. It doesn't read any neasted tsconfig.json file which isn't located in one of the path's part.
+>For example: file located in ~/project/src/components/database will find tsconfig.json in ~/project/src/components and in ~/project but not in ~/project/src/tools
+
+>[!WARNING]
+>Plugin ommits the "extends" field. It takes care only about paths included in local tsconfig.json file just on place.
+
+>[!WARNING]
+>Plugin pays attention on "rootDir" and "rootDirs" fields and check if file supposed to be replaced is actually contained in this scope. The same is with "include" top-scoped field.
+>But it must be noticed that plugin absolutelly ommits "exclude" top-scoped field and doesn't check if file is in excluded scope (only check if it is in included scope).
+
+It is all. The most probably above limits will be removed in the future versions.
+
+### Issues
+If you see any unexpected issues in my plugin behavior feel free for inform me about that
