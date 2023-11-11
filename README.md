@@ -2,17 +2,17 @@
 Babel plugin provide to resolving of path aliases used in tsconfig.json file(s).
 
 ## Table of Contents
-- [Abstract](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#abstract)
-  - [Introdution](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#introduction)
-  - [Problem](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#problem)
-- [Plugin solution](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#plugin-solution)
-  - [Installation](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#installation)
-  - [Usage](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#usage)
-  - [Effect](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#effect)
-- [Issues](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#issues)
-  - [Limits](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#limits)
-  - [Report issue](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#report-issue)
-- [License](https://github.com/ArchAngel776/babel-plugin-typescript-path-aliases#license)
+- [Abstract](#abstract)
+  - [Introdution](#introduction)
+  - [Problem](#problem)
+- [Plugin solution](#plugin-solution)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Effect](#effect)
+- [Issues](#issues)
+  - [Limits](#limits)
+  - [Report issue](#report-issue)
+- [License](#license)
 
 ## Abstract
 ### Introduction
