@@ -1,5 +1,5 @@
 # Babel Plugin - TypeScript path aliases
-Babel plugin provide to resolving of path aliases used in tsconfig.json file.
+Babel plugin provide to resolving of path aliases used in tsconfig.json file(s).
 
 ## Abstract
 ### Introduction
@@ -88,3 +88,55 @@ var _Method = _interopRequireDefault(require("@helpers/Method"));
 There are no any doubts - we can clearly assume certain conclusion:
 >[!NOTE]
 >Code compiled by Babel as JavaScript bundle cannot read path aliases proper for TypeScript source code. It also doesn't take into account using path aliases thus, won't replace them with their relatives equivalents.
+
+## Plugin solution
+For rescue whole situation, I had a honor to create this, simple plugin - modifying Babel behaviour and compiling path aliases into their path aliases. It is really easy to use and everyone can make it ;)
+
+### Installation
+To include plugin into your project just add its as develop dependecy:
+```
+npm install --dev babel-plugin-typescript-path-aliases
+```
+
+Or, if using **yarn**:
+```
+yarn add -D babel-plugin-typescript-path-aliases
+```
+
+Just simple :)
+
+### Usage
+Plug-in from the name purpose is fully plugable. All you have to do is just put its into your .babelrc (or another Babel configuration file) into **plugins** ordered list - can be as first:
+```
+"plugins": [
+  "babel-plugin-typescript-path-aliases"
+  [
+    "@babel/plugin-proposal-decorators",
+    {
+      "version": "legacy"
+    }
+  ],
+  "@babel/plugin-transform-class-properties",
+  "@babel/plugin-transform-classes"
+]
+```
+
+It's all. Now we can compile code by Babel again and take look on the effects.
+
+### Effect
+Comparing import statements this time we can see our result:
+```typescript
+import Transaction from "@components/database/Transaction"
+import MongoURL from "@helpers/MongoUrl"
+import Method from "@helpers/Method"
+```
+
+This time above statement has become a "beautiful <3" proper CommonJS import statement:
+```javascript
+var _Transaction = _interopRequireDefault(require("./Transaction"));
+var _MongoUrl = _interopRequireDefault(require("../../helpers/MongoUrl"));
+var _Method = _interopRequireDefault(require("../../helpers/Method"));
+```
+
+It is that - we got it! Right now, you can enjoy your pretty imports in your source code without any worries about your build behaviour.
+Feel free for use and share this project :)
