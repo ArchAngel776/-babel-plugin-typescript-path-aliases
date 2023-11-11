@@ -1,7 +1,21 @@
 {
   "name": "babel-plugin-typescript-path-aliases",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Babel plugin provide to resolving of path aliases used in tsconfig.json file.",
+  "keywords": [
+    "ts",
+    "typescript",
+    "tsconfig",
+    "babel",
+    "paths",
+    "path-aliases",
+    "babel-path-aliases",
+    "babel-plugin",
+    "babel-import-statements",
+    "babel-typescript-paths",
+    "babel-typescript-path-aliases",
+    "babel-plugin-typescript-path-aliases"
+  ],
   "main": "build/index.js",
   "types": "@types/index.d.ts",
   "scripts": {
